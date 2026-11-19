@@ -5,4 +5,4 @@
 
 | Họ và tên | MSHV | Tài khoản GitHub | Phần chính |
 |---|---|---|---|
-| <<>> | <<>> | <<>> | <<validator luật / đối chiếu / review / bàn giao / truy vết / bảo mật>> |
+| Nguyễn Thái Dương | 2A202603207 | Duongbotroll | Đối chiếu det với panoptic (crosscheck.py), chỉnh ngưỡng trên lô sạch, làm ảnh review, review ảnh, viết mục 1-2 REPORT |
