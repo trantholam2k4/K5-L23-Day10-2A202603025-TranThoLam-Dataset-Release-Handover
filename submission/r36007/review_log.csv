@@ -1,0 +1,14 @@
+image,type,verdict,note
+000000000139,category_swap,confirmed,ghe an mau vang o giua ban an co box detection dung la chair nhung mask panoptic lai gan nham thanh bench
+000000000872,missing_box,confirmed,anh co 2 cau thu bong chay duoc tach 2 mask person rieng biet nhung detection chi co 1 box person va thieu box cho nguoi con lai
+000000001818,missing_box,confirmed,ngua van me ben trai co mask zebra lon nhung thieu hoan toan box detection trong khi ngua van con ben phai co du ca hai
+000000007574,missing_box,confirmed,doi tuong tu lanh refrigerator o mep trai anh co vung mask panoptic nhung bi thieu box detection
+000000008690,instance_merge,confirmed,hai doi tuong person trong anh co 2 box detection rieng biet nhung lai bi gop chung vao mot mask panoptic
+000000010092,category_swap,confirmed,vat la chiec giuong doi co man chup giua phong box detection ghi bed dung nhung panoptic ghi mouse la sai
+000000012639,bbox_drift,confirmed,cau be ao trang quan den dung ben phai box detection bi lech xuong duoi dau va vai nam ngoai box duoi chan thua khoang trong
+000000012748,missing_box,confirmed,doi tuong person co vung mask panoptic ro rang nhung bi thieu hoan toan box detection
+000000014473,missing_box,confirmed,doi tuong doan tau train co mask panoptic lon nhung khong co box detection tuong ung
+000000017436,bbox_drift,confirmed,bang ghe lon o goc duoi ben trai anh co vung mask panoptic bench bi lech ra ngoai so voi box do detection
+000000018491,class_swap,confirmed,vat the o goc trai thuc te la bang ghe khan dai dung voi mask bench nhung box detection lai gan nham thanh chair
+000000018770,bbox_drift,confirmed,bounding box detection bi lech va bao trum vung qua rong so voi vung mask panoptic cua doi tuong tie
+000000023126,class_swap,confirmed,phan dau va mom con ngua ben phai co mask panoptic dung la horse nhung box detection lai gan nham thanh sheep
