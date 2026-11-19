@@ -201,9 +201,10 @@ def main() -> None:
     # Xuất ứng viên đối chiếu (Dương) nếu truyền cờ --candidates
     if args.candidates is not None:
         candidates = find_candidates(delivery_dir)
+        payload = candidates if isinstance(candidates, dict) else {"candidates": candidates}
         args.candidates.parent.mkdir(parents=True, exist_ok=True)
         args.candidates.write_text(
-            json.dumps({"candidates": candidates}, indent=2, ensure_ascii=False),
+            json.dumps(payload, indent=2, ensure_ascii=False),
             encoding="utf-8",
         )
 

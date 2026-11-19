@@ -43,6 +43,8 @@ def load_classes(path: Path) -> dict[int, str]:
 
 def load_candidates(path: Path) -> list[dict[str, str]]:
     payload = load_json(path)
+    if isinstance(payload, dict) and isinstance(payload.get("candidates"), dict):
+        payload = payload["candidates"]
     if isinstance(payload, dict):
         rows = payload.get("candidates", payload.get("errors", []))
     else:
@@ -54,14 +56,14 @@ def load_candidates(path: Path) -> list[dict[str, str]]:
     for index, row in enumerate(rows, start=1):
         if not isinstance(row, dict):
             raise ValueError(f"candidate {index} is not an object")
-        target = str(row.get("target", "")).strip()
+        target = str(row.get("target") or row.get("image") or "").strip()
         candidate_type = str(row.get("type", "")).strip()
         if not target or not candidate_type:
-            raise ValueError(f"candidate {index} needs target and type")
+            raise ValueError(f"candidate {index} needs target/image and type")
         candidates.append({
             "target": Path(target).stem,
             "type": candidate_type,
-            "detail": str(row.get("detail", "")),
+            "detail": str(row.get("detail") or row.get("why") or ""),
         })
     return candidates
 
