@@ -1,0 +1,17 @@
+image,type,annotator,reviewer,action
+000000000872,missing_box,A03,Q03,relabel_detection
+000000001818,missing_box,A03,Q03,relabel_detection
+000000002473,duplicate_box,A02,Q02,relabel_detection
+000000006763,bbox_out_of_bounds,A04,Q02,relabel_detection
+000000007574,missing_box,A04,Q01,relabel_detection
+000000009400,missing_image,A04,Q01,relabel_detection
+000000012639,bbox_drift,A04,Q02,relabel_detection
+000000012748,missing_box,A04,Q02,relabel_detection
+000000014473,missing_box,A01,Q01,relabel_detection
+000000017436,bbox_drift,A05,Q02,relabel_detection
+000000018491,class_swap,A05,Q01,relabel_detection
+000000018575,invalid_class,A05,Q01,relabel_detection
+000000018770,bbox_drift,A05,Q01,relabel_detection
+000000018833,duplicate_box,A05,Q01,relabel_detection
+000000020247,invalid_class,A05,Q01,relabel_detection
+000000023126,class_swap,A03,Q01,relabel_detection

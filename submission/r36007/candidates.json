@@ -1,0 +1,379 @@
+{
+  "params": {
+    "match_iou": 0.25,
+    "cov": 0.93,
+    "gap": 0.04,
+    "poke": 0.02,
+    "poke_px": 2.0,
+    "merge_px": 200,
+    "merge_frac": 0.1,
+    "min_seg_px": 500
+  },
+  "images": 250,
+  "skipped": {
+    "000000001584": "area khai khác số pixel thật",
+    "000000002473": "có box lặp",
+    "000000006763": "nhãn detection có lớp lạ/tràn mép",
+    "000000007795": "category_id lạ",
+    "000000015597": "category_id lạ",
+    "000000017899": "area khai khác số pixel thật",
+    "000000018575": "nhãn detection có lớp lạ/tràn mép",
+    "000000018833": "có box lặp",
+    "000000020247": "nhãn detection có lớp lạ/tràn mép"
+  },
+  "summary": {
+    "candidates": 13,
+    "images_with_candidates": 13,
+    "by_type": {
+      "class_swap|category_swap": 4,
+      "missing_box": 5,
+      "bbox_drift": 3,
+      "instance_merge": 1
+    }
+  },
+  "candidates": [
+    {
+      "image": "000000000139",
+      "type": "class_swap|category_swap",
+      "score": 0.998,
+      "why": "box và segment trùng vị trí (IoU 1.00) nhưng detection ghi 'chair', panoptic ghi 'bench'",
+      "boxes": [
+        {
+          "cls": "chair",
+          "rect": [
+            359.0,
+            218.1,
+            415.0,
+            320.9
+          ]
+        }
+      ],
+      "segment": {
+        "id": 3165572,
+        "cls": "bench",
+        "bbox": [
+          359,
+          218,
+          415,
+          321
+        ],
+        "px": 2251
+      },
+      "det_cls": "chair",
+      "pan_cls": "bench"
+    },
+    {
+      "image": "000000010092",
+      "type": "class_swap|category_swap",
+      "score": 0.995,
+      "why": "box và segment trùng vị trí (IoU 0.99) nhưng detection ghi 'bed', panoptic ghi 'mouse'",
+      "boxes": [
+        {
+          "cls": "bed",
+          "rect": [
+            93.6,
+            187.2,
+            439.4,
+            376.3
+          ]
+        }
+      ],
+      "segment": {
+        "id": 7107699,
+        "cls": "mouse",
+        "bbox": [
+          94,
+          187,
+          439,
+          376
+        ],
+        "px": 55313
+      },
+      "det_cls": "bed",
+      "pan_cls": "mouse"
+    },
+    {
+      "image": "000000018491",
+      "type": "class_swap|category_swap",
+      "score": 0.991,
+      "why": "box và segment trùng vị trí (IoU 0.99) nhưng detection ghi 'chair', panoptic ghi 'bench'",
+      "boxes": [
+        {
+          "cls": "chair",
+          "rect": [
+            0.0,
+            141.1,
+            223.9,
+            153.0
+          ]
+        }
+      ],
+      "segment": {
+        "id": 10793650,
+        "cls": "bench",
+        "bbox": [
+          0,
+          141,
+          224,
+          153
+        ],
+        "px": 851
+      },
+      "det_cls": "chair",
+      "pan_cls": "bench"
+    },
+    {
+      "image": "000000023126",
+      "type": "class_swap|category_swap",
+      "score": 0.957,
+      "why": "box và segment trùng vị trí (IoU 0.96) nhưng detection ghi 'sheep', panoptic ghi 'horse'",
+      "boxes": [
+        {
+          "cls": "sheep",
+          "rect": [
+            457.1,
+            304.5,
+            507.8,
+            412.9
+          ]
+        }
+      ],
+      "segment": {
+        "id": 4802889,
+        "cls": "horse",
+        "bbox": [
+          458,
+          306,
+          508,
+          412
+        ],
+        "px": 908
+      },
+      "det_cls": "sheep",
+      "pan_cls": "horse"
+    },
+    {
+      "image": "000000001818",
+      "type": "missing_box",
+      "score": 0.442,
+      "why": "segment zebra 120106 pixel không có box detection nào",
+      "boxes": [],
+      "segment": {
+        "id": 8092282,
+        "cls": "zebra",
+        "bbox": [
+          0,
+          1,
+          638,
+          425
+        ],
+        "px": 120106
+      }
+    },
+    {
+      "image": "000000012639",
+      "type": "bbox_drift",
+      "score": 0.211,
+      "why": "16% pixel segment nằm ngoài box",
+      "boxes": [
+        {
+          "cls": "person",
+          "rect": [
+            407.2,
+            166.5,
+            471.0,
+            354.7
+          ]
+        }
+      ],
+      "segment": {
+        "id": 8488071,
+        "cls": "person",
+        "bbox": [
+          411,
+          125,
+          468,
+          293
+        ],
+        "px": 6080
+      },
+      "cov": 0.837,
+      "gap": -0.221,
+      "poke": 0.221,
+      "iou": 0.502
+    },
+    {
+      "image": "000000018770",
+      "type": "bbox_drift",
+      "score": 0.2,
+      "why": "23% pixel segment nằm ngoài box",
+      "boxes": [
+        {
+          "cls": "tie",
+          "rect": [
+            253.6,
+            218.2,
+            346.0,
+            419.5
+          ]
+        }
+      ],
+      "segment": {
+        "id": 2169881,
+        "cls": "tie",
+        "bbox": [
+          269,
+          176,
+          361,
+          377
+        ],
+        "px": 5497
+      },
+      "cov": 0.769,
+      "gap": -0.21,
+      "poke": 0.21,
+      "iou": 0.492
+    },
+    {
+      "image": "000000012748",
+      "type": "missing_box",
+      "score": 0.185,
+      "why": "segment person 56935 pixel không có box detection nào",
+      "boxes": [],
+      "segment": {
+        "id": 4079972,
+        "cls": "person",
+        "bbox": [
+          221,
+          139,
+          480,
+          632
+        ],
+        "px": 56935
+      }
+    },
+    {
+      "image": "000000014473",
+      "type": "missing_box",
+      "score": 0.158,
+      "why": "segment train 43223 pixel không có box detection nào",
+      "boxes": [],
+      "segment": {
+        "id": 4013141,
+        "cls": "train",
+        "bbox": [
+          0,
+          155,
+          593,
+          308
+        ],
+        "px": 43223
+      }
+    },
+    {
+      "image": "000000017436",
+      "type": "bbox_drift",
+      "score": 0.133,
+      "why": "segment thò ra ngoài box 15 px (14% cạnh box)",
+      "boxes": [
+        {
+          "cls": "bench",
+          "rect": [
+            2.0,
+            507.1,
+            175.9,
+            614.6
+          ]
+        }
+      ],
+      "segment": {
+        "id": 4017234,
+        "cls": "bench",
+        "bbox": [
+          22,
+          534,
+          178,
+          630
+        ],
+        "px": 5919
+      },
+      "cov": 0.975,
+      "gap": -0.143,
+      "poke": 0.143,
+      "iou": 0.583
+    },
+    {
+      "image": "000000000872",
+      "type": "missing_box",
+      "score": 0.12,
+      "why": "segment person 47692 pixel không có box detection nào",
+      "boxes": [],
+      "segment": {
+        "id": 12234672,
+        "cls": "person",
+        "bbox": [
+          164,
+          126,
+          429,
+          607
+        ],
+        "px": 47692
+      }
+    },
+    {
+      "image": "000000008690",
+      "type": "instance_merge",
+      "score": 0.102,
+      "why": "segment person trải trên 2 box person: 90% pixel trong box thứ nhất, 10% ở phần riêng của box thứ hai",
+      "boxes": [
+        {
+          "cls": "person",
+          "rect": [
+            136.7,
+            18.6,
+            351.5,
+            396.8
+          ]
+        },
+        {
+          "cls": "person",
+          "rect": [
+            379.7,
+            390.3,
+            637.5,
+            474.4
+          ]
+        }
+      ],
+      "segment": {
+        "id": 8945058,
+        "cls": "person",
+        "bbox": [
+          137,
+          19,
+          637,
+          474
+        ],
+        "px": 48894
+      }
+    },
+    {
+      "image": "000000007574",
+      "type": "missing_box",
+      "score": 0.072,
+      "why": "segment refrigerator 22219 pixel không có box detection nào",
+      "boxes": [],
+      "segment": {
+        "id": 8420729,
+        "cls": "refrigerator",
+        "bbox": [
+          1,
+          169,
+          103,
+          446
+        ],
+        "px": 22219
+      }
+    }
+  ]
+}
